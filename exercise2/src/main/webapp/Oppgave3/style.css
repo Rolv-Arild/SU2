@@ -1,0 +1,20 @@
+#paragraf {
+    font-size: 12cm;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.overTre {
+    color: black;
+}
+
+.enTilTre {
+    color: green;
+
+}
+
+.underEn {
+    color: red;
+}
