@@ -27,6 +27,11 @@
                     $.ajax({
                         url: 'rest/kunder/' + $("#deleteId").val(),
                         type: 'DELETE',
+                        data: JSON.stringify({
+                            id: $("#deleteId").val(),
+                        }),
+                        contentType: 'application/json; charset=utf-8',
+                        dataType: 'json',
                         success: function(result) {
                             $('#myTable').DataTable().ajax.reload();
                         }
@@ -49,6 +54,22 @@
                         }
                     });
                 });
+
+                $("#change").click(function () {
+                    $.ajax({
+                        url: 'rest/kunder',
+                        type: 'PUT',
+                        data: JSON.stringify({
+                            id: $("#id").val(),
+                            navn: $("#changeName").val()
+                        }),
+                        contentType: 'application/json; charset=utf-8',
+                        dataType: 'json',
+                        success: function(result) {
+                            $('#myTable').DataTable().ajax.reload();
+                        }
+                    })
+                })
             });
         </script>
     </head>
@@ -67,5 +88,9 @@
         <input id="newId" type="text" value="newId">
         <input id="newName" type="text" value="newName">
         <button id="create">Create New</button><br>
+
+        <input id="id" type="text" value="id">
+        <input id="changeName" type="text" value="newName">
+        <button id="change">Change</button><br>
     </body>
 </html>
