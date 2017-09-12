@@ -7,10 +7,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="exercise4" />
+        <module name="Oving5" />
+        <module name="rest-template" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="exercise4" target="1.7" />
+      <module name="Oving5" target="1.5" />
+      <module name="rest-template" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

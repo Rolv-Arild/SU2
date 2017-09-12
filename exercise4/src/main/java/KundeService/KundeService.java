@@ -1,10 +1,10 @@
 package KundeService;
 
+import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
-import javax.ws.rs.*;
-import javax.ws.rs.core.MediaType;
 
 @Path("/kunder/")
 public class KundeService {
@@ -14,7 +14,7 @@ public class KundeService {
     @Path("/{kundeId}")
     @Produces(MediaType.APPLICATION_JSON)
     public Kunde getKunde(@PathParam("kundeId") String kundeId) {
-        if (!kunder.containsKey(kundeId)) throw new NotFoundException("Not found");
+        if (!kunder.containsKey(kundeId)) throw new NotFoundException("Ikke funnet");
         return kunder.get(kundeId);
     }
 
@@ -44,7 +44,7 @@ public class KundeService {
         if (kunder.get(kunde.getId()) != null) {
             kunder.put(kunde.getId(), kunde);
         } else {
-            throw new NotFoundException("Not found");
+            throw new NotFoundException("Ikke funnet");
         }
     }
 }
