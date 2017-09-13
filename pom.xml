@@ -1,0 +1,17 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+    <name>su2</name>
+    <groupId>su2</groupId>
+    <artifactId>su2</artifactId>
+    <version>1.0</version>
+
+	<modules>
+        <module>exercise1</module>
+        <module>exercise4</module>
+        <module>klient3</module>
+        <module>klient4</module>
+        <module>server3</module>
+        <module>rest-template</module>
+	</modules>
+    
+</project>
