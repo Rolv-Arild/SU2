@@ -9,11 +9,6 @@
         <webroots>
           <root url="file://$MODULE_DIR$/exercise1/src/main/webapp" relative="/" />
         </webroots>
-        <sourceRoots>
-          <root url="file://$MODULE_DIR$/src" />
-          <root url="file://$MODULE_DIR$/exercise4/src/main/java" />
-          <root url="file://$MODULE_DIR$/Øving5/src/main/java" />
-        </sourceRoots>
       </configuration>
     </facet>
     <facet type="web" name="Web2">
@@ -24,11 +19,6 @@
         <webroots>
           <root url="file://$MODULE_DIR$/Server3/src/main/webapp" relative="/" />
         </webroots>
-        <sourceRoots>
-          <root url="file://$MODULE_DIR$/src" />
-          <root url="file://$MODULE_DIR$/exercise4/src/main/java" />
-          <root url="file://$MODULE_DIR$/Øving5/src/main/java" />
-        </sourceRoots>
       </configuration>
     </facet>
     <facet type="web" name="Web3">
@@ -39,11 +29,6 @@
         <webroots>
           <root url="file://$MODULE_DIR$/exercise2/src/main/webapp" relative="/" />
         </webroots>
-        <sourceRoots>
-          <root url="file://$MODULE_DIR$/src" />
-          <root url="file://$MODULE_DIR$/exercise4/src/main/java" />
-          <root url="file://$MODULE_DIR$/Øving5/src/main/java" />
-        </sourceRoots>
       </configuration>
     </facet>
     <facet type="web" name="Web4">
@@ -54,11 +39,6 @@
         <webroots>
           <root url="file://$MODULE_DIR$/Server2" relative="/WEB-INF" />
         </webroots>
-        <sourceRoots>
-          <root url="file://$MODULE_DIR$/src" />
-          <root url="file://$MODULE_DIR$/exercise4/src/main/java" />
-          <root url="file://$MODULE_DIR$/Øving5/src/main/java" />
-        </sourceRoots>
       </configuration>
     </facet>
     <facet type="web" name="Web5">
@@ -69,11 +49,6 @@
         <webroots>
           <root url="file://$MODULE_DIR$/rest-template/src/main/webapp" relative="/" />
         </webroots>
-        <sourceRoots>
-          <root url="file://$MODULE_DIR$/src" />
-          <root url="file://$MODULE_DIR$/exercise4/src/main/java" />
-          <root url="file://$MODULE_DIR$/Øving5/src/main/java" />
-        </sourceRoots>
       </configuration>
     </facet>
     <facet type="web" name="Web6">
@@ -84,11 +59,6 @@
         <webroots>
           <root url="file://$MODULE_DIR$/Klient3/src/main/webapp" relative="/" />
         </webroots>
-        <sourceRoots>
-          <root url="file://$MODULE_DIR$/src" />
-          <root url="file://$MODULE_DIR$/exercise4/src/main/java" />
-          <root url="file://$MODULE_DIR$/Øving5/src/main/java" />
-        </sourceRoots>
       </configuration>
     </facet>
   </component>
@@ -101,6 +71,5 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="jquery-1.11.1" level="application" />
   </component>
 </module>

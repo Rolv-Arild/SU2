@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Melding</title>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script language="JavaScript">
+        $(document).ready(function () {
+            $("#send").click(function () {
+                $.post("/Oving5/rest/service", $("#melding").val());
+            })
+        })
+    </script>
+
+</head>
+<body>
+<input id="melding" type="text" value="">
+<button id="send">Send melding</button><br>
+</body>
+</html>

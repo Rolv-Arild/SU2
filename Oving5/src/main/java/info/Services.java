@@ -1,25 +1,20 @@
-package Services;
+package info;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
-/**
- * @author nilstes
- */
-@Path("/thepath/")
-public class Service {
+@Path("/service/")
+public class Services {
     private static String info;
 
     @GET
-    @Path("/{info}")
     @Produces(MediaType.TEXT_PLAIN)
     public String getInfo() {
         return info;
     }
 
-    @PUT
-//    @Path("/{info}")
-    @Consumes(MediaType.APPLICATION_JSON)
+    @POST
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     public void endreInfo(String i) {
         info = i;
     }

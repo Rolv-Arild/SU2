@@ -4,12 +4,17 @@
     <title>Oppgave2</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="jquery-3.2.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
     <script language="javascript">
         $(document).ready(function() {
-            $.get("rest/thepath", function(data){
-                $("#update").html(data);
-            });
+            var update = $("#update");
+
+            setInterval(function () {
+                $.get("/Oving5/rest/service", function (message) {
+                    update.html(message);
+                });
+            }, 1);
         });
     </script>
 </head>
