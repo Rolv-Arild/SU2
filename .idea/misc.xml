@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/exercise1" />
     <file type="web" url="file://$PROJECT_DIR$/exercise4" />
+    <file type="web" url="file://$PROJECT_DIR$/Klient3" />
+    <file type="web" url="file://$PROJECT_DIR$/Klient4" />
     <file type="web" url="file://$PROJECT_DIR$/Oving5" />
+    <file type="web" url="file://$PROJECT_DIR$/Quiz" />
+    <file type="web" url="file://$PROJECT_DIR$/rest-template" />
+    <file type="web" url="file://$PROJECT_DIR$/Server3" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -10,6 +16,7 @@
         <option value="$PROJECT_DIR$/Øving5/pom.xml" />
         <option value="$PROJECT_DIR$/exercise4/pom.xml" />
         <option value="$PROJECT_DIR$/Oving5/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>

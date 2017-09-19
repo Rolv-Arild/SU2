@@ -12,6 +12,7 @@
         <module>klient4</module>
         <module>server3</module>
         <module>rest-template</module>
-	</modules>
+        <module>Quiz</module>
+    </modules>
     
 </project>

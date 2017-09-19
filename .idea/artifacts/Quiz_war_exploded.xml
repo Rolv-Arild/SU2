@@ -1,10 +1,10 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="rest-template:war exploded">
-    <output-path>$PROJECT_DIR$/rest-template/target/rest-template-1.0-SNAPSHOT</output-path>
+  <artifact type="exploded-war" name="Quiz:war exploded">
+    <output-path>$PROJECT_DIR$/Quiz/target/Quiz-1.0-SNAPSHOT</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="rest-template" />
+          <element id="module-output" name="Quiz" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: junit:junit:4.12" />
@@ -37,9 +37,9 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/rest-template/target/rest-template-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/Quiz/target/Quiz-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="rest-template/web/Web" />
+      <element id="javaee-facet-resources" facet="Quiz/web/Web" />
     </root>
   </artifact>
 </component>

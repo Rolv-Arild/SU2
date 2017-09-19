@@ -3,8 +3,14 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Oving5/Oving5.iml" filepath="$PROJECT_DIR$/Oving5/Oving5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Quiz/Quiz.iml" filepath="$PROJECT_DIR$/Quiz/Quiz.iml" />
       <module fileurl="file://$PROJECT_DIR$/SU2.iml" filepath="$PROJECT_DIR$/SU2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exercise1/exercise1.iml" filepath="$PROJECT_DIR$/exercise1/exercise1.iml" />
       <module fileurl="file://$PROJECT_DIR$/exercise4/exercise4.iml" filepath="$PROJECT_DIR$/exercise4/exercise4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Klient3/klient3.iml" filepath="$PROJECT_DIR$/Klient3/klient3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Klient4/klient4.iml" filepath="$PROJECT_DIR$/Klient4/klient4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rest-template/rest-template.iml" filepath="$PROJECT_DIR$/rest-template/rest-template.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Server3/server3.iml" filepath="$PROJECT_DIR$/Server3/server3.iml" />
       <module fileurl="file://C:\Users\rolv_\Documents\SU2\SU2\Oving5\Øving5.iml" filepath="C:\Users\rolv_\Documents\SU2\SU2\Oving5\Øving5.iml" />
     </modules>
   </component>
