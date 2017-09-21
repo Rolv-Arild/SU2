@@ -3,17 +3,24 @@
  */
 
 $(document).ready(function() {
-    // $('#myTable').DataTable({
-    //     ajax: {
-    //         url: 'rest/quizzes',
-    //         dataSrc: ''
-    //     },
-    //     columns: [
-    //         {data: 'id'},
-    //         {data: 'navn'}
-    //     ]
-    // });
-    //
+    var quizT = $("#quizTable");
+
+    quizT.DataTable({
+        ajax: {
+            url: 'rest/quizzes',
+            dataSrc: ''
+        },
+        columns: [
+            {data: 'id'},
+            {data: 'name'}
+        ]
+    });
+
+    setInterval(function () {
+        quizT.DataTable().ajax.reload();
+    },
+    1000);
+
     // $("#delete").click(function () {
     //     $.ajax({
     //         url: 'rest/quizzes/' + $("#deleteId").val(),
