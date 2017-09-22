@@ -1,21 +1,37 @@
-.body{
-    background: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/itCjTBE/grey-light-smooth-moving-waves-background-video-animation-hd-1920x1080_vjkea4zve__F0000.png");
+body{
+    background: url("https://wallpaperbrowse.com/media/images/White-Background-9B1_ROA1R16.jpg");
     background-size: cover;
 }
 
-#quizTable {
+.display {
     margin-top: 20px;
     width: 100%;
+    text-align-all: center;
 }
 
-.th {
+.btn-default {
+    background-color: deeppink;
+}
+
+th {
+    background-color: deeppink;
     border: 1px solid black;
     font-size: 2em;
     text-align: center;
 }
 
-.td {
+td {
+    background-color: deepskyblue;
     border: 1px solid black;
     font-size: 1em;
     text-align: center;
+}
+
+/* For changing selected indices' color */
+table.dataTable.display tbody tr.odd>.sorting_1, table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
+    background-color: deepskyblue;
+}
+
+table.dataTable.display tbody tr.even>.sorting_1, table.dataTable.order-column.stripe tbody tr.even>.sorting_1 {
+    background-color: deepskyblue;
 }
