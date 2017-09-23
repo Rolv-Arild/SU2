@@ -14,6 +14,7 @@ import java.util.Map;
 @Path("/quizzes/")
 public class QuizService {
     private static Map<Integer, Quiz> quizzes = new HashMap<>();
+    private static int idCount = 0;
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
@@ -32,6 +33,7 @@ public class QuizService {
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     public void addQuiz(Quiz quiz) {
+        quiz.setId(++idCount);
         quizzes.putIfAbsent(quiz.getId(), quiz);
     }
 

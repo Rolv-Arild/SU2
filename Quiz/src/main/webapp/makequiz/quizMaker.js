@@ -3,38 +3,28 @@
  */
 
 $(document).ready(function () {
-    var questionT = $('#QTable')
+    var questionT = $('#QTable');
+    var dt = questionT.DataTable();
 
     questionT.DataTable({
         ajax: {
-            url: 'rest/questions',
             dataSrc: ''
         },
         columns: [
-            { data: 'id'},
-            { data: 'question'},
-            { data: 'answerIndex'}
+            {data: 'Question'},
+            {data: 'Duration'}
         ]
     });
 
-    setInterval(function () {
-        questionT.DataTable().ajax.reload();
-    },
-    1000);
-
-    // $('#save').click(function () {
-    //     $.ajax({
-    //         url: 'rest/kunder',
-    //         type: 'PUT',
-    //         data: JSON.stringify({
-    //             id: $("#id").val(),
-    //             navn: $("#changeName").val()
-    //         }),
-    //         contentType: 'application/json; charset=utf-8',
-    //         dataType: 'json',
-    //         success: function(result) {
-    //             $('#myTable').DataTable().ajax.reload();
-    //         }
-    //     })
-    // });
+    $('#saveQ').click(function () {
+        var newDataArray = [
+            {
+                "Question": "" + $('#question').val(),
+                "Duration": "" + $('#duration').val()
+            }
+        ];
+        dt.clear();
+        dt.rows.add(newDataArray);
+        dt.draw();
+    });
 });

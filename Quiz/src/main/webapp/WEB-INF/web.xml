@@ -23,7 +23,7 @@
 
     <servlet>
         <servlet-name>makequiz</servlet-name>
-        <jsp-file>/makequiz/quizMaker.jsp</jsp-file>
+        <jsp-file>/makequiz/quizMaker.html</jsp-file>
     </servlet>
 
     <servlet-mapping>
