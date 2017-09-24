@@ -4,6 +4,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -18,6 +19,9 @@ public class Quiz {
     @XmlElement(name = "name")
     private String name;
 
+    @XmlElement(name = "starttime")
+    private Date starttime;
+
     @XmlElement(name = "questions")
     private List<Question> questions = new ArrayList<>();
 
@@ -27,6 +31,10 @@ public class Quiz {
     /* Getters */
     public int getId() {
         return id;
+    }
+
+    public Date getStarttime() {
+        return starttime;
     }
 
     public String getName() {
@@ -44,6 +52,10 @@ public class Quiz {
     /* Setters */
     public void setId(int id) {
         this.id = id;
+    }
+
+    public void setStarttime(Date starttime) {
+        this.starttime = starttime;
     }
 
     public void setName(String name) {

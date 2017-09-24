@@ -23,9 +23,9 @@ public class QuizService {
     }
 
     @GET
-    @Path("/{id}")
+    @Path("/{quizId}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Quiz getQuiz(@PathParam("id") int id) {
+    public Quiz getQuiz(@PathParam("quizId") int id) {
         if (!quizzes.containsKey(id)) throw new NotFoundException("Ikke funnet");
         return quizzes.get(id);
     }
@@ -38,21 +38,22 @@ public class QuizService {
     }
 
     @PUT
-    @Path("/{id}")
+    @Path("/{quizId}")
     @Consumes(MediaType.APPLICATION_JSON)
-    public void changeQuiz(@PathParam("id") int id, Quiz quiz) {
+    public void changeQuiz(@PathParam("quizId") int id, Quiz quiz) {
         Quiz q = quizzes.get(id);
         if (q == null) throw new NotFoundException("Not found");
         q.setName(quiz.getName());
+        q.setStarttime(quiz.getStarttime());
         q.setPlayers(quiz.getPlayers());
         q.setQuestions(quiz.getQuestions());
         quizzes.put(id, q);
     }
 
     @DELETE
-    @Path("/{id}")
+    @Path("/{quizId}")
     @Consumes(MediaType.APPLICATION_JSON)
-    public void deleteQuiz(@PathParam("id") int id) {
+    public void deleteQuiz(@PathParam("quizId") int id) {
         quizzes.remove(id);
     }
 }

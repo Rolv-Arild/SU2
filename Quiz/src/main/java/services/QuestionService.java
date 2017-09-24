@@ -20,9 +20,9 @@ public class QuestionService {
     }
 
     @GET
-    @Path("/{id}")
+    @Path("/{questionId}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Question getQuestion(@PathParam("id") int id) {
+    public Question getQuestion(@PathParam("questionId") int id) {
         if (!questions.containsKey(id)) throw new NotFoundException("Not found");
         return questions.get(id);
     }
@@ -34,9 +34,9 @@ public class QuestionService {
     }
 
     @PUT
-    @Path("/{id}")
+    @Path("/{questionId}")
     @Consumes(MediaType.APPLICATION_JSON)
-    public void changeQuestion(@PathParam("id") int id, Question question) {
+    public void changeQuestion(@PathParam("questionId") int id, Question question) {
         Question q = questions.get(id);
         if (q == null) throw new NotFoundException("Not found");
         q.setAnswerIndex(question.getAnswerIndex());
@@ -46,8 +46,8 @@ public class QuestionService {
     }
 
     @DELETE
-    @Path("/{id}")
-    public void deleteQuestion(@PathParam("id") int id) {
+    @Path("/{questionId}")
+    public void deleteQuestion(@PathParam("questionId") int id) {
         questions.remove(id);
     }
 }

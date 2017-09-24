@@ -11,7 +11,7 @@ $(document).ready(function() {
             dataSrc: ''
         },
         columns: [
-            {data: 'id'},
+            {data: 'quizId'},
             {data: 'name'}
         ]
     });

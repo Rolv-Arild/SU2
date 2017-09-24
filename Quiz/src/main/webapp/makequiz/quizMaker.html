@@ -1,8 +1,9 @@
- <!--Created by IntelliJ IDEA.-->
+  <!--Created by IntelliJ IDEA.-->
   <!--User: Rolv-Arild-->
   <!--Date: 19.09.2017-->
   <!--Time: 12.34-->
   <!--To change this template use File | Settings | File Templates.-->
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -14,17 +15,17 @@
         <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
         <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
-        <script src="script.js" defer type="application/javascript"></script>
-        <script src="QuizMaker/quizMaker.js" defer type="application/javascript"></script>
+        <script src="QuizMaker/quizScript.js" defer type="application/javascript"></script>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div class="container">
             <h1>Make a quiz</h1>
 
-            <label for="navn">Quiz name:</label>
-            <input id="navn" type="text">
-            <br><br><br>
+            <div class="form-group">
+                <input class="form-control" id="name" type="text" placeholder="Name">
+                <input class="form-control" id="startT" type="datetime-local" placeholder="Start time">
+            </div>
 
             <button class="btn btn-default" id="addQuestion" data-toggle="modal" data-target="#questionModal">Add a question</button>
 
@@ -42,7 +43,7 @@
 
                             <div class="form-group">
                                 <label for="question">Question</label>
-                                <input class="form-control" id="question" type="text" placeholder="Name">
+                                <input class="form-control" id="question" type="text" placeholder="Question">
                             </div>
 
                             <!--TODO move to questions-->
