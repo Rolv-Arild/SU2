@@ -12,7 +12,7 @@ import java.util.List;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Question {
 
-    @XmlElement(name = "id")
+    @XmlElement(name = "questionId")
     private int id;
 
     @XmlElement(name = "question")
@@ -23,6 +23,9 @@ public class Question {
 
     @XmlElement(name = "answerIndex")
     private int answerIndex;
+
+    @XmlElement(name = "duration")
+    private int duration;
 
 
     /* Getters */
@@ -42,6 +45,9 @@ public class Question {
         return answerIndex;
     }
 
+    public int getDuration() {
+        return duration;
+    }
 
     /* Setters */
     public void setId(int id) {
@@ -58,5 +64,9 @@ public class Question {
 
     public void setAnswerIndex(int answerIndex) {
         this.answerIndex = answerIndex;
+    }
+
+    public void setDuration(int duration) {
+        this.duration = duration;
     }
 }

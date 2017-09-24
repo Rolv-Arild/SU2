@@ -42,6 +42,7 @@ public class QuestionService {
         q.setAnswerIndex(question.getAnswerIndex());
         q.setOptions(question.getOptions());
         q.setQuestion(question.getQuestion());
+        q.setDuration(question.getDuration());
         questions.put(id, q);
     }
 

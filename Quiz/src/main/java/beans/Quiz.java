@@ -13,7 +13,7 @@ import java.util.List;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Quiz {
 
-    @XmlElement(name = "id")
+    @XmlElement(name = "quizId")
     private int id;
 
     @XmlElement(name = "name")

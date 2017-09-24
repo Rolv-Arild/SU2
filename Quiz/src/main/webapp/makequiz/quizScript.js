@@ -9,7 +9,7 @@ $(document).ready(function () {
         var question = {
             question: $('#question').val(),
             duration: $('#duration').val(),
-            answers: [$('#answer1').val(), $('#answer2').val(), $('#answer3').val(), $('#answer4').val()]
+            options: [$('#answer1').val(), $('#answer2').val(), $('#answer3').val(), $('#answer4').val()]
         };
         questions.push(question);
     });
@@ -20,9 +20,9 @@ $(document).ready(function () {
             url: 'rest/quizzes',
             type: 'POST',
             data: JSON.stringify({
-                name: $('#name').val(),
-                starttime: $('#startT').val(),
-                questions: questions
+                // name: $('#name').val(),
+                // starttime: $('#startT').val(),
+                // questions: questions
             }),
             contentType: 'application/json; charset:utf-8',
             dataType: 'json'
