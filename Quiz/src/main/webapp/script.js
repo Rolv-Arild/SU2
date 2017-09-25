@@ -11,8 +11,8 @@ $(document).ready(function() {
             dataSrc: ''
         },
         columns: [
-            {data: 'quizId'},
-            {data: 'name'}
+            {data: 'name'},
+            {data: 'starttime'}
         ]
     });
 

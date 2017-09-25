@@ -20,12 +20,13 @@ $(document).ready(function () {
             url: 'rest/quizzes',
             type: 'POST',
             data: JSON.stringify({
-                // name: $('#name').val(),
-                // starttime: $('#startT').val(),
-                // questions: questions
+                name: $('#name').val(),
+                starttime: $('#startT').val(),
+                questions: questions
             }),
-            contentType: 'application/json; charset:utf-8',
+            contentType: 'application/json',
             dataType: 'json'
         });
+        window.location.href = '../Quiz';
     });
 });
