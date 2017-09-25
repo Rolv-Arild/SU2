@@ -12,7 +12,10 @@ $(document).ready(function() {
         },
         columns: [
             {data: 'name'},
-            {data: 'starttime'}
+            {data: 'starttime', render: function (data) {
+                var date = new Date(data);
+                return date.toLocaleString();
+            }}
         ]
     });
 

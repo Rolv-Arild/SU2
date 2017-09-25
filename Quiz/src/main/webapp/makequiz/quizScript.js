@@ -12,6 +12,18 @@ $(document).ready(function () {
             options: [$('#answer1').val(), $('#answer2').val(), $('#answer3').val(), $('#answer4').val()]
         };
         questions.push(question);
+        $('#QTable').append(
+            "<tr>"+
+            "<td>" + $('#question').val() + "</td>"+
+            "<td>" + $('#duration').val() + "</td>"+
+            "</tr>"
+        );
+        $('#question').val("");
+        $('#duration').val("");
+        $('#answer1').val("");
+        $('#answer2').val("");
+        $('#answer3').val("");
+        $('#answer4').val("");
     });
 
 
@@ -21,7 +33,7 @@ $(document).ready(function () {
             type: 'POST',
             data: JSON.stringify({
                 name: $('#name').val(),
-                starttime: $('#startT').val(),
+                starttime: new Date($('#startT').val()),
                 questions: questions
             }),
             contentType: 'application/json',

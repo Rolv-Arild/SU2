@@ -6,6 +6,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="exercise1" />
+        <module name="exercise4" />
+        <module name="klient3" />
+        <module name="klient4" />
+        <module name="Oving5" />
+        <module name="Quiz" />
+        <module name="rest-template" />
+        <module name="server3" />
+        <module name="SU2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
