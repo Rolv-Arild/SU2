@@ -1,16 +1,28 @@
 body{
-    background: url("https://wallpaperbrowse.com/media/images/White-Background-9B1_ROA1R16.jpg");
+    background-image: url("img/White-Background-9B1_ROA1R16.jpg");/*"https://wallpaperbrowse.com/media/images/White-Background-9B1_ROA1R16.jpg"*/
     background-size: cover;
 }
 
 .display {
-    margin-top: 20px;
-    width: 100%;
-    text-align-all: center;
+margin-top: 20px;
+width: 100%;
+text-align-all: center;
 }
 
 .btn-default {
-    background-color: deeppink;
+background-color: deeppink;
+}
+
+.btn-lg {
+    width: 30vw;
+    height: 30vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    font-size: 8vh;
+}
+
+.center {
+    margin: 0 auto;
 }
 
 th {

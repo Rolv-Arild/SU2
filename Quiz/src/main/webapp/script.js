@@ -22,7 +22,7 @@ $(document).ready(function() {
     setInterval(function () {
         quizT.DataTable().ajax.reload();
     },
-    1000);
+    30000);
 
     $('#newQuiz').click(function () {
         document.location.href = "QuizMaker";
