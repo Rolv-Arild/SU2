@@ -4,6 +4,7 @@
 
 $(document).ready(function() {
     var quizT = $("#quizTable");
+    var selected = [];
 
     quizT.DataTable({
         ajax: {
@@ -15,8 +16,14 @@ $(document).ready(function() {
             {data: 'starttime', render: function (data) {
                 var date = new Date(data);
                 return date.toLocaleString();
-            }}
-        ]
+            }},
+            {data: 'quizId', visible: false}
+        ],
+        "rowCallback": function( row, data ) {
+            if ( $.inArray(data.DT_RowId, selected) !== -1 ) {
+                $(row).addClass('selected');
+            }
+        }
     });
 
     setInterval(function () {
@@ -29,22 +36,9 @@ $(document).ready(function() {
     });
 
 
-    // $("#delete").click(function () {
-    //     $.ajax({
-    //         url: 'rest/quizzes/' + $("#deleteId").val(),
-    //         type: 'DELETE',
-    //         data: JSON.stringify({
-    //             id: $("#deleteId").val(),
-    //         }),
-    //         contentType: 'application/json; charset=utf-8',
-    //         dataType: 'json',
-    //         success: function (result) {
-    //             $('#myTable').DataTable().ajax.reload();
-    //         }
-    //     });
-    // });
-
-    // $('#myModal').on('shown.bs.modal', function () {
-    //     $('#myInput').focus()
-    // });
+    $('#quizTable tbody').on('click', 'tr', function () {
+        var row = $(this).closest('tr');
+        var data = quizT.dataTable().fnGetData(row).quizId;
+        // TODO show modal for joining
+    });
 });

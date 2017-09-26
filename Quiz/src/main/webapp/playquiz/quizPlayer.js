@@ -20,6 +20,7 @@ function sap () {
 }
 
 $(document).ready(function () {
+
     var quizID = getUrlParameter('quizId');
     var qIndex = getUrlParameter('qIndex');
     if (qIndex === -1) return;
@@ -31,7 +32,8 @@ $(document).ready(function () {
         var quiz = data;
         var questions = data.questions;
 
-        if (qIndex < questions.length) {
+        if (qIndex < 0);
+        else if (qIndex < questions.length) {
             var currentQ = questions[qIndex];
             var i = currentQ.duration;
             $('#timer').text(i);
@@ -41,7 +43,7 @@ $(document).ready(function () {
             setTimeout(function () {
                 window.location.href = window.location.href.replace("qIndex=" + qIndex, "qIndex=" + (qIndex + 1));
             }, currentQ.duration*1000);
-        } else if (qIndex !== -1) {
+        } else {
             window.location.href = window.location.href.replace("qIndex=" + qIndex, "qIndex=-1");
         }
     });

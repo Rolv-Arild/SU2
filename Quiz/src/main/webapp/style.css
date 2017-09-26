@@ -10,19 +10,32 @@ text-align-all: center;
 }
 
 .btn-default {
-background-color: deeppink;
+    background-color: deeppink;
 }
 
 .btn-lg {
-    width: 30vw;
-    height: 30vh;
+    background-color: deeppink;
+    width: 25vw;
+    height: 25vh;
     padding-top: 5vh;
     padding-bottom: 5vh;
     font-size: 8vh;
 }
 
+.btn-lg:hover {
+    background-color: hotpink;
+}
+
+.btn-lg:enabled {
+    background-color: deepskyblue;
+}
+
 .center {
     margin: 0 auto;
+}
+
+.selected {
+    background-color: hotpink;
 }
 
 th {
@@ -38,6 +51,7 @@ td {
     font-size: 1em;
     text-align: center;
 }
+
 
 /* For changing selected indices' color */
 table.dataTable.display tbody tr.odd>.sorting_1, table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
