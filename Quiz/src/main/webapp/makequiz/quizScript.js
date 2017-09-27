@@ -62,7 +62,10 @@ $(document).ready(function () {
             return;
         }
 
-        if (!$('#startT').val() || new Date($('#startT').val()) <= new Date()) {
+        var now = new Date();
+        var fut = new Date();
+        fut.setSeconds(now.getSeconds() + 315400000);
+        if (!$('#startT').val() || new Date($('#startT').val()) <= now || new Date($('#startT').val()) > fut) {
             alert("Please enter valid start time");
             return;
         }

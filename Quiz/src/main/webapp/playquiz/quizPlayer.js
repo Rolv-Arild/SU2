@@ -15,14 +15,10 @@ function getUrlParameter(sParam) {
     }
 }
 
-function sap () {
-    return;
-}
-
 $(document).ready(function () {
 
     var quizID = getUrlParameter('quizId');
-    var qIndex = getUrlParameter('qIndex');
+    var qIndex = parseInt(getUrlParameter('qIndex'));
     if (qIndex === -1) return;
     var nick = getUrlParameter('nick');
 
@@ -41,10 +37,10 @@ $(document).ready(function () {
                 $('#timer').text(--i);
             }, 1000);
             setTimeout(function () {
-                window.location.href = window.location.href.replace("qIndex=" + qIndex, "qIndex=" + (qIndex + 1));
+                window.location.href = window.location.href.replace("qIndex=" + qIndex, "qIndex=" + (qIndex+1));
             }, currentQ.duration*1000);
         } else {
-            window.location.href = window.location.href.replace("qIndex=" + qIndex, "qIndex=-1");
+            window.location.href = "/Quiz/scoreboard/scoreboard.html?quizId=" + quizID;
         }
     });
 });

@@ -4,7 +4,6 @@
 
 $(document).ready(function() {
     var quizT = $("#quizTable");
-    var selected = [];
 
     quizT.DataTable({
         ajax: {
@@ -18,12 +17,7 @@ $(document).ready(function() {
                 return date.toLocaleString();
             }},
             {data: 'quizId', visible: false}
-        ],
-        "rowCallback": function( row, data ) {
-            if ( $.inArray(data.DT_RowId, selected) !== -1 ) {
-                $(row).addClass('selected');
-            }
-        }
+        ]
     });
 
     setInterval(function () {
@@ -38,7 +32,22 @@ $(document).ready(function() {
 
     $('#quizTable tbody').on('click', 'tr', function () {
         var row = $(this).closest('tr');
-        var data = quizT.dataTable().fnGetData(row).quizId;
-        // TODO show modal for joining
+        var rowData = quizT.dataTable().fnGetData(row);
+        if (rowData === null) return;
+        var id = rowData.quizId;
+
+        $('#quizModal').modal();
+
+        $('#enterQuiz').click(function () {
+            if (!$('#nick').val()) {
+                alert("Please enter a username");
+                return;
+            }
+            window.location.href = "/Quiz/playquiz/waitingroom.html?quizId=" + id + "&qIndex=0&nick=" + $('#nick').val();
+        });
+
+        $('#viewScoreB').click(function () {
+            window.location.href = "/Quiz/scoreboard/scoreboard.html?quizId=" + id;
+        })
     });
 });
