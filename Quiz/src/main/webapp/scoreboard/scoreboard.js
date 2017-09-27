@@ -25,19 +25,24 @@ $(document).ready(function () {
         $('#quizName').text(data.name);
     });
 
-    $('#scoreB').DataTable({
-        ajax: {
-            url: '/Quiz/rest/quizzes/' + quizId,
-            dataSrc: ''
-        },
-        columns: [
-            {data: 'players.username'},
-            {data: 'players.score'},
-            {data: 'name', visible: false}
-        ]
-    });
-
     setInterval(function () {
-       $('#scoreB').DataTable().ajax.reload();
+        $.getJSON("/Quiz/rest/quizzes/" + quizId, function (data) {
+            $('#scoreB tbody').empty();
+            $.each(data.players, function (index, player) {
+                $('#scoreB tbody').append("<tr><td>" + player.username + "</td><td>" + player.score + "</td></tr>");
+            });
+
+            // setInterval(function () {
+            //     $('#scoreB tbody').empty();
+            //     $.each(data.players, function (index, player) {
+            //         $('#scoreB tbody').append("<tr><td>" + player.username + "</td><td>" + player.score + "</td></tr>");
+            //     });
+            // }, 1000);
+        });
     }, 1000);
+
+
+    $('#back').click(function () {
+        window.location.href = "/Quiz/";
+    });
 });

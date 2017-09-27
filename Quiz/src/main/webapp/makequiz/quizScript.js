@@ -25,10 +25,10 @@ $(document).ready(function () {
             return;
         }
         var selectedIndex = -1;
-        if (!$('#radio1').hasOwnProperty("checked")) selectedIndex = 0;
-        else if (!$('#radio2').hasOwnProperty("checked")) selectedIndex = 1;
-        else if (!$('#radio3').hasOwnProperty("checked")) selectedIndex = 2;
-        else if (!$('#radio4').hasOwnProperty("checked")) selectedIndex = 3;
+        if (document.getElementById('radio1').checked) selectedIndex = 0;
+        else if (document.getElementById('radio2').checked) selectedIndex = 1;
+        else if (document.getElementById('radio3').checked) selectedIndex = 2;
+        else if (document.getElementById('radio4').checked) selectedIndex = 3;
         if (selectedIndex === -1) {
             alert("Please select an answer");
             return;
@@ -121,5 +121,9 @@ $(document).ready(function () {
             $('#radio4').attr("disabled", true);
             $('#radio4').prop("checked", false);
         }
+    });
+
+    $('#back').click(function () {
+        window.location.href = "/Quiz/";
     });
 });

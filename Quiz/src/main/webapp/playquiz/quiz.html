@@ -9,7 +9,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Make a quiz</title>
+    <title>Play quiz</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -25,20 +25,24 @@
             <h2 id="timer">Timer</h2>
 
             <div class="btn-group-lg justify-content-between" data-toggle="buttons">
-                <label class="btn btn-lg">
+                <label id="btn1" class="btn btn-lg">
                     <input type="radio" name="options" id="ans1" autocomplete="off">1
                 </label>
-                <label class="btn btn-lg">
+                <label id="btn2" class="btn btn-lg">
                     <input type="radio" name="options" id="ans2" autocomplete="off">2
                 </label>
                 <br>
-                <label class="btn btn-lg">
+                <label id="btn3" class="btn btn-lg">
                     <input type="radio" name="options" id="ans3" autocomplete="off">3
                 </label>
-                <label class="btn btn-lg">
+                <label id="btn4" class="btn btn-lg">
                     <input type="radio" name="options" id="ans4" autocomplete="off">En ekstra lang tekststreng for å teste formattering
                 </label>
             </div>
+            <br><br><br>
+            <button id="back" class="btn btn-default">
+                Back
+            </button>
         </div>
 
 

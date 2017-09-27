@@ -21,35 +21,30 @@ $(document).ready(function () {
     var nick = getUrlParameter('nick');
 
    $.getJSON("/Quiz/rest/quizzes/" + getUrlParameter("quizId"), function (data) {
-       var secondsleft = Math.floor((new Date(data.starttime) - new Date()) / 1000);
+       var millisLeft = new Date(data.starttime) - new Date();
        var id = data.quizId;
 
        $('#waiting').text("Waiting for " + data.name);
-       $('#secondsLeft').text(secondsleft + " seconds left");
+       var i = Math.floor(millisLeft/1000);
+       $('#secondsLeft').text(i + " seconds left");
 
-       if (secondsleft > 0) {
-           console.log(secondsleft*1000);
-           var i = secondsleft;
+       if (millisLeft > 0) {
            setInterval(function () {
                $('#secondsLeft').text((--i) + " seconds left");
            }, 1000);
 
            setTimeout(function () {
                window.location.href = "/Quiz/playquiz/quiz.html?quizId=" + id + "&qIndex=0&nick=" + nick;
-           }, secondsleft*1000)
+           }, millisLeft)
        }
        else {
-           // check if quiz is ongoing
-           var questions = data.questions;
-           for (var j = 0; j < questions.length; j++) {
-               if (secondsleft + questions[j].duration > data.starttime) {
-                   window.location.href = "/Quiz/playquiz/quiz.html?quizId=" + id + "&qIndex=" + j + "&nick=" + nick;
-                   return;
-               }
-           }
            // go to results
-           alert("Sorry, quiz is already finished, taking you to results");
+           alert("Sorry, quiz has already started, taking you to results");
            window.location.href = "/Quiz/scoreboard/scoreboard.html?quizId=" + id;
        }
    });
+
+    $('#back').click(function () {
+        window.location.href = "/Quiz/";
+    });
 });

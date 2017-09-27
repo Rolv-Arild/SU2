@@ -69,4 +69,17 @@ public class Question {
     public void setDuration(int duration) {
         this.duration = duration;
     }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Question question1 = (Question) o;
+
+        if (answerIndex != question1.answerIndex) return false;
+        if (!question.equals(question1.question)) return false;
+        return options.equals(question1.options);
+    }
 }
